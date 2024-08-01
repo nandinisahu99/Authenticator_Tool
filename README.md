@@ -4,7 +4,7 @@
 NodeJs Authenticator App is the starter code for any webApp that requires authentication. It allows users to register and login either using email or through google login. Users can update their password while they are logged in and can also reset their password in case they forget it.
 
 # Installation
-1) git clone https://github.com/aman-15091998/NodeJs-Authenticator-App.git
+1) git clone https://github.com/nandinisahu99/NodeJs-Authenticator-App.git
 2) move to the repository folder open with vs code
 3) Obtain google OAuth2.0 credentials from google developers console. 
 4) Update the callbackUrl in the google developers console with the "{base url}/user/auth/google/callback". For eg. http://localhost:3000/user/auth/google/callback
