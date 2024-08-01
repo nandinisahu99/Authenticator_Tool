@@ -1,0 +1,58 @@
+<h1 class="text-center my-3">Sign In</h1>
+<div class="container">
+  <%if(loggedIn){%>
+  <h2>You are already logged in</h2>
+  <%}%> <%if(error){%>
+  <div class="alert alert-warning" role="alert"><%=error%></div>
+  <%}%> <%if(!loggedIn){%>
+  <section id="login" class="mx-4">
+    <form
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+      action="/user/login"
+    >
+      <div class="mb-3">
+        <label for="username" class="form-label">Email address</label>
+        <input
+          type="email"
+          name="username"
+          class="form-control"
+          id="username"
+          aria-describedby="emailHelp"
+          required
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a class="forgot-password" href="/user/reset-password"
+        >Forgot password?</a
+      >
+    </form>
+  </section>
+  <div id="divider-section" class="my-3">
+    <div class="divider mx-2"></div>
+    <span>OR</span>
+    <div class="divider mx-2"></div>
+  </div>
+  <span class="option-span">Sign in using any of these</span>
+  <div id="signup-options">
+    <a href="/user/auth/google" class="mx-4 my-4">
+      <div class="option google">
+        <img width="100%" height="100%" src="/google.png" alt="Google" />
+      </div>
+    </a>
+  </div>
+  <%}%>
+</div>

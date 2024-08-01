@@ -1,0 +1,54 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* #img-section{
+    width: 70%;
+    height: 100vh;
+    background-color: orange;
+} */
+#register, #login, #update{
+    width: 340px;
+}
+
+
+
+#divider-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.divider{
+    width: 140px;
+    background-color: black;
+    border-radius:50px;
+    height: 4px;
+}
+.option-span{
+    font-size: 0.7rem;
+}
+#signup-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.option{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+
+.forgot-password{
+    position: relative;
+    right:-130px;
+}
+.color-red{
+    color: red;
+}

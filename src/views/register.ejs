@@ -1,0 +1,76 @@
+<h1 class="text-center my-3">Sign Up</h1>
+<div class="container">
+  <%if(loggedIn){%>
+  <h2>You are already logged in</h2>
+  <%}%> <%if(error){%>
+  <div class="alert alert-warning" role="alert"><%=error%></div>
+  <%}%> <%if(!loggedIn){%>
+  <section id="register" class="mx-4">
+    <form
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+      action="/user/register"
+    >
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="name"
+          name="name"
+          class="form-control"
+          id="name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          required
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          class="form-control"
+          id="confirmPassword"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <a href="/user/login" class="btn btn-primary mx-2">Login</a>
+    </form>
+  </section>
+  <div id="divider-section" class="my-3">
+    <div class="divider mx-2"></div>
+    <span>OR</span>
+    <div class="divider mx-2"></div>
+  </div>
+  <span class="option-span">Sign up using any of these</span>
+  <div id="signup-options">
+    <a href="/user/auth/google" class="mx-4 my-4">
+      <div class="option google">
+        <img width="100%" height="100%" src="/google.png" alt="Google" />
+      </div>
+    </a>
+  </div>
+  <%}%>
+</div>
