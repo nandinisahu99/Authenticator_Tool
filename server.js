@@ -20,6 +20,8 @@ app.set("views", path.resolve("src", "views"));
 app.use(expressLayouts);
 
 app.use(cookieParser());
+
+//session is created
 app.use(
   expressSession({
     secret: process.env.SESSION_SECRET,
@@ -27,7 +29,7 @@ app.use(
     resave: false,
     cookie: { secure: false },
   })
-);
+);  
 app.use(flash());
 // Passport initialization
 app.use(passport.initialize());
